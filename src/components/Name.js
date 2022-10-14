@@ -32,8 +32,10 @@ class Name extends React.Component {
               <tr>
                 <td>{itm.show.name}</td>
                 <td>{itm.show.language}</td>
-                <Button className="m-2" color="primary">
-                  Book
+                <Button className="m-2" color="primary" 
+                onClick={event =>  window.location.href='/book'}
+                >
+                  View
                 </Button>
               </tr>
             );

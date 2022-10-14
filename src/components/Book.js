@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 const Book = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -27,7 +29,12 @@ const Book = () => {
               </Card.Title>
               <Card.Title>{datas.show.type}</Card.Title>
               <Card.Text>{datas.show.genres}</Card.Text>
-              <Button variant="primary">Book my Seat</Button>
+              <Button
+                variant="primary"
+                onClick={()=>navigate("/booking")}
+              >
+                Book my Ticket
+              </Button>
             </Card.Body>
           </Card>
         </div>

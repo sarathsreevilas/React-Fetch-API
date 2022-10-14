@@ -1,0 +1,7 @@
+._input{
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    /* text-align-last: left; */
+}
